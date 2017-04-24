@@ -1,5 +1,6 @@
 import React from 'react';
 import Menu from '../Els/Menu';
+import HbClient from '../../Utils/HbClient';
 import { TouchableOpacity } from 'react-native';
 import {Actions} from 'react-native-router-flux';
 import {
@@ -10,7 +11,14 @@ import {
 } from 'react-native';
 
 export default class Top extends React.Component {
+
+  componentDidMount() {
+    const hb = new HbClient();
+    console.log(hb.fetch());
+  }
+
   render() {
+    console.log('render');
     return (
       <View style={styles.container}>
         <Text> Root </Text>

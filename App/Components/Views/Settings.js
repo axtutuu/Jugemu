@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
   AppRegistry,
   StyleSheet,
@@ -6,11 +6,11 @@ import {
   View
 } from 'react-native';
 
-export default class About extends Component {
+export default class Settings extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text> About</Text>
+        <Text> Settings </Text>
       </View>
     )
   }
