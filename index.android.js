@@ -12,7 +12,7 @@ import {
   View
 } from 'react-native';
 
-export default class MultiFeed extends Component {
+export default class Jugemu extends Component {
   render() {
     return (
       <View style={styles.container}>
@@ -50,4 +50,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('MultiFeed', () => MultiFeed);
+AppRegistry.registerComponent('Jugemu', () => Jugemu);

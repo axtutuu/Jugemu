@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Menu from '../Els/Menu';
 import { TouchableOpacity } from 'react-native';
 import {Actions} from 'react-native-router-flux';
 import {
@@ -8,7 +9,7 @@ import {
   View
 } from 'react-native';
 
-export default class Top extends Component {
+export default class Top extends React.Component {
   render() {
     return (
       <View style={styles.container}>
@@ -16,6 +17,7 @@ export default class Top extends Component {
         <TouchableOpacity onPress={Actions.about}>
           <Text> About </Text>
         </TouchableOpacity>
+        <Menu />
       </View>
     )
   }
