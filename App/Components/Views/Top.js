@@ -1,8 +1,8 @@
 import React from 'react';
 import Menu from '../Els/Menu';
-import HbClient from '../../Utils/HbClient';
+import Articles from '../Els/Articles';
 import { TouchableOpacity } from 'react-native';
-import {Actions} from 'react-native-router-flux';
+import { Actions } from 'react-native-router-flux';
 import {
   AppRegistry,
   StyleSheet,
@@ -12,11 +12,6 @@ import {
 
 export default class Top extends React.Component {
 
-  componentDidMount() {
-    const hb = new HbClient();
-    console.log(hb.fetch());
-  }
-
   render() {
     console.log('render');
     return (
@@ -25,6 +20,7 @@ export default class Top extends React.Component {
         <TouchableOpacity onPress={Actions.about}>
           <Text> About </Text>
         </TouchableOpacity>
+        <Articles />
         <Menu />
       </View>
     )
