@@ -1,7 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import * as actions from '../../Actions';
-import { ScrollView, View, Text } from 'react-native';
+import {
+  ScrollView, View, Text, StyleSheet
+} from 'react-native';
 
 import HbClient from '../../Utils/HbClient';
 
@@ -18,18 +20,36 @@ class Articles extends React.Component {
   render() {
     const items = this.props.articles.map((v, i)=>{
       return (
-        <View key={i}>
+        <View key={i} style={styles.box}>
           <Text>{v.title}</Text>
         </View>
       )
     });
     return (
       <ScrollView>
-        {items}
+        <View style={styles.container}>
+          {items}
+        </View>
       </ScrollView>
     )
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#CCC'
+  },
+  box: {
+    marginLeft: 30,
+    marginRight: 30,
+    marginTop: 5,
+    marginBottom: 5,
+    backgroundColor: '#FFF',
+    shadowColor: '#171717',
+    shadowOpacity: 0.8,
+    shadowOffset: {width: 2, height: 2}
+  }
+});
 
 function mapStateToProps(state) {
   return {
