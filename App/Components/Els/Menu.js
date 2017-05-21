@@ -15,6 +15,9 @@ export default class Menu extends React.Component {
         <TouchableHighlight style={styles.box} onPress={Actions.top}>
           <Image source={require('../../Images/home.png')} style={styles.img}/>
         </TouchableHighlight>
+        <TouchableHighlight style={styles.box} onPress={Actions.tw}>
+          <Image source={require('../../Images/tw.png')} style={styles.img}/>
+        </TouchableHighlight>
         <TouchableHighlight style={styles.box}>
           <Image source={require('../../Images/add.png')} style={styles.img}/>
         </TouchableHighlight>

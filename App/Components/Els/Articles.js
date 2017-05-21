@@ -28,13 +28,9 @@ class Articles extends React.Component {
     const height = ev.nativeEvent.contentSize.height-(ev.nativeEvent.layoutMeasurement.height+300)
 
     if(ev.nativeEvent.contentOffset.y>height) {
-      console.log('add');
-      console.log(this);
-      console.log(this.props.articles.length);
       this.hb.fetch(this.props.articles.length)
         .then((res) => {
           this.props.setArticles(_.concat(this.props.articles, res));
-          // props.setArticles(res);
         });
     }
   }
@@ -49,7 +45,7 @@ class Articles extends React.Component {
     });
     return (
       <ScrollView onScroll={(e) => { this.handleScroll(e) }}>
-        <View style={styles.container} onPress={this.press} test='test'>
+        <View style={styles.container} onPress={this.press}>
           {items}
         </View>
       </ScrollView>
